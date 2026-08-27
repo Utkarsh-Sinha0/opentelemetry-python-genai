@@ -21,9 +21,7 @@ __all__ = ["BedrockInstrumentor"]
 class BedrockInstrumentor(BaseInstrumentor):
     """An instrumentor for Amazon Bedrock."""
 
-    def __init__(self) -> None:
-        super().__init__()
-        self._handler: TelemetryHandler | None = None
+    _handler: TelemetryHandler | None = None
 
     def instrumentation_dependencies(self) -> Collection[str]:
         return _instruments
