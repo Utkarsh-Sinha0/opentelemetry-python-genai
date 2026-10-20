@@ -31,7 +31,9 @@ def environment_options(environment: str) -> tuple[str, str]:
     return python_version, resolution
 
 
-def generate_requirements(repo_root: Path, environment: str, output: Path) -> None:
+def generate_requirements(
+    repo_root: Path, environment: str, output: Path
+) -> None:
     """Resolve the environment's complete tox dependency list with uv."""
     python_version, resolution = environment_options(environment)
     repo_root = repo_root.resolve()
